@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=crearBotones;
+        function crearBotones()
+        {
+            for (let i = 1; i <= 3; i++)
+            {
+                let eBoton = document.createElement("input");
+                eBoton.type="button";
+                eBoton.value=i;
+                eBoton.addEventListener("click",numBoton);
+                document.body.appendChild(eBoton);
+            }
+        }
+
+        function numBoton()
+        {
+            console.log(this.value);
+        }
+    </script>
+
+</head>
+<body>
+
+
+
+</body>
+
+</html>
