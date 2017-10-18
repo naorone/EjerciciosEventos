@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+    <script>
+
+        window.onload= add;
+
+        function add() {
+
+            let links= document.getElementsByTagName("a");
+            for (let i = 0; i< links.length; i++)
+            {
+                links[i].addEventListener("mouseover", darLink);
+            }
+
+        }
+        function darLink()
+        {
+            let link= this.href;
+            let input = document.getElementById("inp");
+            input.setAttribute("value", link);
+        }
+
+    </script>
+
+</head>
+<body>
+    <ul>
+        <li><a href="https://www.google.es">Google</a></li>
+        <li><a href="https://www.amazon.es">Amazon</a></li>
+        <li><a href="https://www.ebay.es">Ebay</a></li>
+    </ul>
+        <input id="inp" type="text" value="">
+</body>
+</html>
