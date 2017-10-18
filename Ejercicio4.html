@@ -1,0 +1,62 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <title>Eventos</title>
+
+    <script>
+        window.onload= addEv;
+        function addEv()
+        {
+            let divs= document.getElementsByTagName("div");
+            for (let i = 0; i< divs.length; i++)
+            {
+                divs[i].addEventListener("click", cambiarRojo);
+                divs[i].addEventListener("mouseover", cambiarVerde);
+                divs[i].addEventListener("mouseout", cambiarAzul);
+            }
+
+            function cambiarRojo()
+            {
+
+                this.style.backgroundColor= "red";
+            }
+            function cambiarVerde()
+            {
+
+                this.style.backgroundColor= "green";
+            }
+            function cambiarAzul()
+            {
+
+                this.style.backgroundColor= "blue";
+            }
+
+
+        }
+    </script>
+
+
+</head>
+<style type="text/css">
+    .linea{
+        height:100px;
+        width:100px;
+        background:blue;
+        display:inline-block;
+    }
+</style>
+<body>
+<div class="linea">ASR31</div>
+<div class="linea">ASR32</div>
+<div class="linea">SM21</div>
+<div class="linea">SM22</div>
+<div class="linea">DW31</div>
+<div class="linea">DW32</div>
+</body>
+</html>
+
+<!--
+Cuando pasemos el raton por encima, se ponga verde.
+Cuando no este el raton encima, se ponga azul.
+Cuando hagamos click, se ponga rojo.
+-->
